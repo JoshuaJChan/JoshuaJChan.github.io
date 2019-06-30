@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@-ms-viewport {
+    width: device-width;
+}
+
+.mainimg {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button-submit {
+	height: 38px;
+	background: #e8491d;
+	border: 0; /*by default, buttons have borders;looks like Windows XP */
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff;
+}
+
+body {
+	font-family: 'Open Sans', Roboto, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	/* font: 15px/1.5 'Open Sans', Roboto, sans-serif; (Shortcut) */
+	padding: 0;
+	margin: 0;
+	background: #f4f4f4;
+}
+
+/* Global */
+.container {
+	width:80%;
+	margin: auto;
+	overflow:hidden;
+}
+
+.dark {
+	padding: 15px;
+	background: #35424a;
+	color:#ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Header */
+header {
+	background: #35424a;
+	color: #fff;
+	padding-top: 30px;
+	min-height: 70px; /*when screen smaller, menu goes down, height adjusts*/
+	border-bottom: #e8491d 3px solid;
+}
+
+header a {
+	color: #ffffff;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding {
+	float:left;
+}
+
+header #branding h1{
+	margin: 0;
+}
+
+header nav {
+	float:right;	
+	margin-top: 10px
+}
+
+header .highlight, header .current a {
+	color:#e8491d;
+	font-weight:bold;
+}
+
+header a:hover {
+	color:#cccccc;
+	font-weight: bold;
+}
+
+/* Showcase */
+#showcase {
+	min-height: 650px;
+	background-image: url('../img/jhe.jpg');
+	background-repeat: no-repeat; /*don't want it to repeat/tile */
+	background-position: 50% -100px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#showcase h1 {
+	margin-top: 170px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+
+#showcase p {
+	font-size: 20px;
+}
+
+/* Contact */
+#contact {
+	padding: 15px;
+	color: #ffffff;
+	background: #35424a;
+}
+
+#contact h1 {
+	float: left;
+}
+
+#contact form {
+	float: right;
+	margin-top: 15px;
+}
+
+#contact input[type="email"] {
+	padding: 4px;
+	height: 25px;
+	width: 250px;
+}
+
+/* Boxes */
+#boxes {
+	margin-top: 20px;
+}
+
+#boxes .box{
+	float: left;
+	text-align:center;
+	width: 30%;
+	padding: 10px;
+}
+
+#boxes .box img{
+	width: 90px;
+}
+
+
+/* Sidebar */
+aside#sidebar {
+	float:right;
+	width: 30%; 
+	margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+	width: 90%;
+	padding: 5px;
+	
+}
+
+/* Social Media */
+article.social-media {
+	text-align:center;
+	background-color:#171d21;	
+	color:#ffffff;
+	font-size: 12px;
+	padding: 5px;
+}
+
+/* Main-col */
+article#main-col {
+	float: left;
+	width: 65%;
+}
+
+/* Projects */
+ul#projects li{
+	list-style: none;
+	padding: 20px;
+	border: #cccccc solid 1px;
+	margin-bottom: 5px;
+	background: #e6e6e6;
+}
+
+
+footer {
+	padding: 20px;
+	color: #ffffff;
+	background-color: #000000;
+	text-align: center;
+}
+
+/* Media Queries */	/* Some parts will only work if the window is at a certain width; fixes the mobile device view */
+@media(max-width:768px) { 
+	/* eg) body {
+		display:none;
+		} If shortage of px below 768px, will not display at all */
+	header #branding,
+	header nav,
+	header nav li,
+	#contact h1,
+	#contact form,
+	#boxes .box,
+       	article#main-col,
+	aside#sidebar {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	header {
+		padding-bottom: 20px;
+	}
+
+	#showcase h1{
+		margin-top: 100px;
+	}
+
+	#contact button, .quote button{
+		display: block;
+		width: 100%;
+	}
+
+	#contact form input[type="email"], .quote input, .quote textarea{
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
